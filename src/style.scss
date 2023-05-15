@@ -41,8 +41,11 @@ html {
         header {
             display: flex;
             flex-direction: column;
-            height: 80vh;
-            background: url('../public/assets/background.jpeg') center;
+
+            &#index {
+                height: 80vh;
+                background: url('../public/assets/background.jpeg') center;
+            }
 
             nav {
                 padding-top: $padding;
@@ -154,6 +157,15 @@ html {
                             }
                         }
                     }
+                }
+            }
+
+            .content {
+                display: flex;
+                flex-direction: row;
+
+                aside {
+                    width: 30%;
                 }
             }
         }
