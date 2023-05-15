@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap');
+
+$dark: #333;
+$medium: #888;
+$light: #e7e9e1;
+$green: #052D22;
+$background : #E0D8CF;
+$padding: 20px;
+$margin: 10px;
+
+html {
+
+    scroll-behavior: smooth;
+
+    body {
+        margin: 0;
+        background-color: $background;
+        color: $dark;
+        font-family: 'Roboto', sans-serif;
+        ;
+
+        a {
+            color: $green;
+            text-decoration: none;
+            transition: 0.2s ease-in-out;
+
+            &.button {
+                color: $light;
+                background-color: $green;
+                border-radius: 5px;
+                padding: 5px 10px;
+                font-size: 1.5rem;
+            }
+
+            &.source {
+                font-size: 0.9rem;
+                text-decoration: underline;
+            }
+        }
+
+        header {
+            display: flex;
+            flex-direction: column;
+            height: 80vh;
+            background: url('../public/assets/background.jpeg') center;
+
+            nav {
+                padding-top: $padding;
+
+                ul {
+                    margin-top: 0;
+                    list-style: none;
+
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+
+                    li {
+                        margin: 0 $margin;
+
+                        a {
+                            color: $dark;
+
+                            &:hover {
+                                color: $medium;
+                                text-decoration: underline;
+                            }
+
+                            &[aria-disabled='true'] {
+                                color: $medium;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            h1 {
+                font-size: 4rem;
+                align-self: center;
+                margin-top: 20vh;
+                font-family: 'Pacifico', cursive;
+                padding: $padding;
+            }
+
+            a {
+                align-self: center;
+            }
+        }
+
+        main {
+            margin-top: 10vh;
+            padding: 0 $padding;
+
+            section {
+                &.plant {
+                    display: flex;
+                    flex-direction: row;
+
+                    div {
+                        width: 50%;
+                        padding: $padding;
+
+                        img {
+                            width: 100%;
+                        }
+
+                        h2 {
+                            font-family: 'Pacifico', cursive;
+                        }
+                    }
+
+                    hr {
+                        margin: 100px 0;
+                        border: solid 1px $dark;
+                    }
+                }
+
+                &.articles {
+                    h2 {
+                        text-align: center;
+                        font-size: 3rem;
+                        color: #044314;
+                        margin-top: 10vh;
+                        font-family: 'Pacifico', cursive;
+                    }
+
+                    div {
+
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        margin: 0 10px;
+
+
+                        article {
+                            width: 30%;
+                            margin-bottom: $margin;
+                            padding: 1%;
+                            border: 1px solid #ccc;
+                            border-radius: 5px;
+                            box-shadow: 0 0 5px #ccc;
+
+                            h3 {
+                                color: #044314;
+                                margin: 0;
+                                font-family: 'Pacifico', cursive;
+                            }
+
+                            p {
+                                margin: 0;
+                                padding: $padding 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        footer {
+            margin-top: 10vh;
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
